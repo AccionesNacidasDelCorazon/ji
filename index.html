@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acciones Nacidas del Corazón</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .logo {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 50px;
+            letter-spacing: 2px;
+            border-bottom: 1px solid white;
+            display: inline-block;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+        }
+        
+        .title1 {
+            font-size: 80px;
+            display: inline-block;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            text-align: left;
+            color: yellow;
+        }
+        
+        .subtitle1 {font-size: 19px;
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        .main-image {
+            display: block;
+            margin: 0 auto 40px;
+            max-width: 90%;
+            height: 400px;
+            border-radius: 10px;
+        }
+
+        .mission-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            padding: 40px 20px;
+            background-color: #1c1c1c;
+            border-radius: 10px;
+            margin: 0 20px 40px;
+        }
+
+        .mission-image {
+            max-width: 350px;
+            border-radius: 10px;
+            height: 250px;
+        }
+
+        .mission-text {
+            max-width: 900px;
+        }
+
+        .mission-text h2 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .mission-text p {
+            color: #ccc;
+            line-height: 1.6;
+            font-size: 24px;
+        }
+
+        .btn-whatsapp {
+            display: block;
+            margin: 20px auto 40px;
+            padding: 10px 20px;
+            background-color: #25D366;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            width: fit-content;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1da851;
+        }
+
+        .btn-form {
+            display: block;
+            margin: 20px auto 40px;
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            width: fit-content;
+        }
+
+        .btn-form:hover {
+            background-color: #ddd;
+        }
+
+        .form-section {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .program-section {
+            padding: 20px;
+            background-color: #1c1c1c;
+            margin: 0 20px 40px;
+            border-radius: 10px;
+        }
+
+        .program-section h2 {
+            color: #3cdcff;
+            font-size: 35px;
+            text-align: center;
+        }
+        
+        .program-section p {
+            color: white;
+            font-size: 24px;
+        }
+
+        .program-section ul {
+            list-style: none;
+            padding: 0;
+            
+            
+        }
+      
+        .btn-form {
+            display: block;
+            margin: 20px auto 40px;
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            width: fit-content;
+        }
+        
+        .program-section2 {
+            padding: 30px;
+            background-color: #1c1c1c;
+            margin: 0 20px 40px;
+            border-radius: 10px;
+        }
+
+        .program-section h2.1 {
+            color: #ff5555;
+            font-size: 35px;
+        }
+        
+        .program-section p {
+            color: white;
+            font-size: 24px;
+        }
+
+        .program-section ul {
+            list-style: none;
+            padding: 0;
+            
+            
+        }
+
+        .program-section li {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #555;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        footer .contacto, footer .caso {
+            max-width: 45%;
+        }
+
+        footer h3 {
+            margin-top: 0;
+        }
+
+        .btn-caso {
+            display: inline-block;
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .recuadros-horizontales {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 40px 20px;
+            margin: 0 20px 40px;
+            background-color: #1c1c1c;
+            border-radius: 10px;
+            flex-wrap: wrap;
+         }
+
+         .recuadro {
+            background-color: #222;
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+         }
+
+.recuadro:hover {
+    transform: translateY(-5px);
+}
+
+.recuadro img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.recuadro p {
+    font-size: 24px;
+    color: #ccc;
+    margin: 0;
+}
+
+        
+    </style>
+</head>
+<body>
+
+<div style="text-align: center;">
+    <img src="img/logo.png" alt="logo" style="width: 100px;">
+</div>
+
+
+<div class="header">
+    <div class="title">ACCIONES NACIDAS DEL CORAZON</div>
+</div>
+
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="Organizaciones.html">Organizaciones</a>
+    <a href="Encuentra tu Organizacion.html">Encuentra tu Organizacion</a>
+    <a href="Testimonios.html">Testimonios</a>
+</nav>
+
+
+<section class="form-section">
+    <div class="title1"><strong>¿Necesitas ayuda pero no sabes a dónde acudir?</strong></div>
+    <div class="subtitle1"><h3>Explora en minutos las opciones de apoyo disponibles en tu ciudad o situación. Gratis, rápido y sin complicaciones.</h3></div>
+   
+</section>
+
+
+<div id="inicio">
+    <img src="img/logocnci.jpeg" alt="Imagen principal" class="main-image">
+</div>
+
+
+<section class="program-section">
+    <h2><strong>UNIMOS CORAZONES, TRANSFORMAMOS COMUNIDADES</strong></h2>
+    <p>Somos una organización comprometida con la conciencia social y la acción comunitaria. En Acciones Nacidas del Corazón trabajamos para llevar apoyo real a quienes más lo necesitan, promoviendo la solidaridad como motor de cambio.
+Nuestra labor se centra en la difusión de programas sociales, la promoción de servicios comunitarios y la canalización de reportes ciudadanos, para atender problemáticas como falta de alimento, atención médica, apoyo educativo, limpieza comunitaria y rehabilitación de espacios públicos.
+Actuamos como puente entre las comunidades y las instituciones, organizaciones y personas que quieren ayudar, para que juntos podamos construir entornos más dignos, seguros y humanos.
+Creemos en el poder de las acciones que nacen del corazón, porque es ahí donde comienza el verdadero cambio.</p>
+    
+</section>
+<section class="program-section">
+
+<h2><strong>REPRESENTANTES</strong></h2>
+
+<section class="recuadros-horizontales">
+    <div class="recuadro">
+        <p><strong>Valeria Paredes</strong></p>
+        <img src="img/val.jpeg" alt="val">
+        <p>Líder del proyecto</p>
+    </div>
+    <div class="recuadro">
+        <p><strong>Roy Espinosa</strong></p>
+        <img src="img/roy.jpeg" alt="roy">
+        <p>Creador y desarrollador de la página</p>
+    </div>
+    <div class="recuadro">
+        <p><strong>Andryk Nicolas</strong></p>
+        <img src="img/and.jpeg" alt="andryck">
+        <p>Documentador del proyecto</p>
+    </div>
+</section>
+</section>
+
+
+
+
+<section class="mission-section">
+    <img src="img/corazon.jpeg" alt="Manos con corazón" class="mission-image">
+
+    <div class="mission-text">
+        <h2>Nuestra Misión: Ayudarte Siempre</h2>
+        <p>
+            En <strong>Acciones Nacidas del Corazón</strong> creemos que cada persona merece ser escuchada, acompañada y apoyada en los momentos más difíciles. Nuestra misión es ser ese punto de encuentro entre quienes enfrentan desafíos urgentes y quienes desean marcar una diferencia genuina.
+Nos dedicamos a construir puentes humanos donde antes solo había barreras, conectando necesidades reales con manos dispuestas a ayudar.
+        </p>
+        
+    </div>
+</section>
+
+
+<section class="program-section 2">
+    <h2 class="title1"><strong>¿Cómo funciona?</strong></h2>
+
+    <ul style="font-size: 22px; color: #ccc; line-height: 1.8; padding-left: 20px;">
+        <li><strong>1. Dirígete a la sección “Encuentra tu organización”</strong><br>
+        Desde el menú principal en la parte superior, haz clic en la opción correspondiente.</li>
+
+        <li><strong>2. Contesta unas preguntas rápidas</strong><br>
+        Una vez dentro, selecciona las respuestas que se ajusten a la ayuda que estás buscando.</li>
+
+        <li><strong>3. Revisa tus recomendación</strong><br>
+        La página te mostrará de una a tres organizaciones que mejor se adapten a tus necesidades, incluyendo su número de contacto y detalles importantes.</li>
+
+        <li><strong>4. Elige y Acepta</strong><br>
+        Si una de ellas te convence, haz clic en <em>“Enviar mi informacion”</em> y tus datos se enviarán automáticamente.</li>
+
+        <li><strong>5. ¡Listo!</strong><br>
+        Tu solicitud ha sido enviada. La organización se pondrá en contacto contigo directamente.</li>
+
+        <li><strong>6. (Opcional) Déjanos tu testimonio</strong><br>
+        Si recibiste ayuda y quieres motivar a más personas, comparte tu experiencia con nosotros via whatsapp.</li>
+    </ul>
+
+    
+</section>
+
+
+<!Pie de página>
+<footer>
+    <div class="contacto">
+        <h3>Contacto</h3>
+        <p><strong>ACCIONES NACIDAS DEL CORAZÓN</strong><br>
+            Calle Paseo de las Almas, 64017 Monterrey, N.L.<br>
+            Tel: 81 2613 5775<br>
+            Email: 1320e147@cnci.com.mx</p>
+    </div>
+     <div class="mission-text">
+        
+        <a href="https://w.app/accionesnacidasdelcorazon" class="btn-whatsapp" target="_blank">NUESTRO WHATSAPP</a>
+    </div>
+</footer>
+
+</body>
+</html>

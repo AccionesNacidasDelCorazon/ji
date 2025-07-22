@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acciones Nacidas del Corazón</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .logo {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 50px;
+            letter-spacing: 2px;
+            border-bottom: 1px solid white;
+            display: inline-block;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+        }
+        
+        .title1 {
+            font-size: 80px;
+            display: inline-block;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            text-align: left;
+            color: yellow;
+        }
+        
+        .subtitle1 {font-size: 19px;
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        .main-image {
+            display: block;
+            margin: 0 auto 40px;
+            max-width: 90%;
+            height: 400px;
+            border-radius: 10px;
+        }
+
+        .mission-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            padding: 40px 20px;
+            background-color: #1c1c1c;
+            border-radius: 10px;
+            margin: 0 20px 40px;
+        }
+
+        .mission-image {
+            max-width: 350px;
+            border-radius: 10px;
+            height: 250px;
+        }
+
+        .mission-text {
+            max-width: 900px;
+        }
+
+        .mission-text h2 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .mission-text p {
+            color: #ccc;
+            line-height: 1.6;
+            font-size: 24px;
+        }
+
+        .btn-whatsapp {
+            display: block;
+            margin: 20px auto 40px;
+            padding: 10px 20px;
+            background-color: #25D366;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            width: fit-content;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1da851;
+        }
+
+        .btn-form {
+            display: block;
+            margin: 20px auto 40px;
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            width: fit-content;
+        }
+
+        .btn-form:hover {
+            background-color: #ddd;
+        }
+
+        .form-section {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .program-section {
+            padding: 30px;
+            background-color: #1c1c1c;
+            margin: 0 20px 40px;
+            border-radius: 10px;
+        }
+
+        .program-section h2 {
+            color: #ff5555;
+            font-size: 35px;
+        }
+        
+        .program-section p {
+            color: white;
+            font-size: 26px;
+        }
+
+        .program-section ul {
+            list-style: none;
+            padding: 0;
+            
+            
+        }
+
+        .program-section li {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #555;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        footer .contacto, footer .caso {
+            max-width: 45%;
+        }
+
+        footer h3 {
+            margin-top: 0;
+        }
+
+        .btn-caso {
+            display: inline-block;
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+
+.testimonios-section {
+    padding: 40px 20px;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    margin: 0 20px 40px;
+}
+
+.testimonios-title {
+    text-align: center;
+    color: yellow;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.testimonio-card {
+    display: flex;
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.testimonio-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.testimonio-info {
+    color: #ccc;
+    flex: 1;
+}
+
+.testimonio-info h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.testimonio-info p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+        
+    </style>
+</head>
+<body>
+
+
+<div style="text-align: center;">
+    <img src="img/logo.png" alt="logo" style="width: 100px;">
+</div>
+
+<!-- Encabezado -->
+<div class="header">
+    <div class="title">ACCIONES NACIDAS DEL CORAZON</div>
+</div>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="Organizaciones.html">Organizaciones</a>
+    <a href="Encuentra tu Organizacion.html">Encuentra tu Organizacion</a>
+    <a href="Testimonios.html">Testimonios</a>
+</nav>
+
+
+<section class="testimonios-section">
+    <h2 class="testimonios-title">Testimonios</h2>
+
+    <div class="testimonio-card">
+        <img src="img/roy.jpeg" alt="roy" class="testimonio-img">
+        <div class="testimonio-info">
+            <h3>Roy</h3>
+            <p>Es muy gratificante llegar a esta última sección y con ella dar por terminado este proyecto. Sé que HTML es de lo más sencillo que puedo ver en mi carrera, pero aprender desde cero, con apenas conocimientos básicos, no fue nada fácil. Me apoyé en tutoriales de YouTube, preguntas en Google y de vez en cuando en ChatGPT, sobre todo cuando me sentía realmente atorado. Y digo 'de vez en cuando' porque tenía muchas ganas de que este proyecto me dejara algo más que solo una entrega; quería aprender de verdad. Más allá del tema del proyecto, me enfoqué en entender la estructura base, en tener herramientas y conocimientos que me sirvan en futuros trabajos. Empecé desde el viernes, justo después de que el maestro nos dijera que lo que habíamos entregado lo sorprendió para mal. Y aunque no soy alguien con un orgullo excesivo, tampoco me gusta dejar una mala imagen de lo que hago ni de lo que sé. Si hay algo que no sé, estoy seguro de que lo puedo aprender. Y este proyecto fue prueba de eso. Gracias.</p>
+        </div>
+    </div>
+
+    <div class="testimonio-card">
+        <img src="img/val.jpeg" alt="valeria" class="testimonio-img">
+        <div class="testimonio-info">
+            <h3>Valeria</h3>
+            <p>Cuando nos propusimos crear una página web dedicada a los programas sociales, sabíamos que estábamos dando un gran paso para acercar información vital a quienes más la necesitan. Desde el primer día, nuestro equipo se reunió para definir objetivos claros: identificar los programas disponibles, verificar sus requisitos y plazos, y presentar todo de manera accesible y ordenada. Cada integrante asumió un rol clave, mientras unos investigaban a fondo en portales oficiales, otros construían la estructura de la página, diseñando una interfaz limpia y de fácil navegación.
+Durante las sesiones de trabajo colaborativo, compartíamos hallazgos propuestas de diseño en tiempo real.</p>
+        </div>
+    </div>
+
+    <div class="testimonio-card">
+        <img src="img/and.jpeg" alt="andryk" class="testimonio-img">
+        <div class="testimonio-info">
+            <h3>Andryk</h3>
+            <p>Trabajar en equipo para desarrollar una página dedicada a los programas sociales en Nuevo León ha sido una grandiosa experiencia, tanto a nivel personal como académico. Desde el inicio, nuestro objetivo fue claro, crear un sitio accesible y útil para aquellas personas que no tienen acceso fácil a la información sobre los apoyos disponibles en nuestro estado.
+El primer paso fue organizar al equipo y dividir las tareas según las habilidades de cada integrante. Algunos nos enfocamos en investigar a fondo los distintos programas sociales, mientras que otros trabajaron en el diseño y la estructura de la página para que fuera clara, sencilla y fácil de navegar.
+Durante el proceso, nos dimos cuenta de que muchas personas no saben qué apoyos existen, cómo acceder a ellos o simplemente no tienen acceso a plataformas digitales. Por eso decidimos incluir explicaciones simples, También agregamos un botón de whatsapp para resolver dudas comunes.
+Uno de los mayores aprendizajes fue la importancia de la empatía y la comunicación. Al trabajar en equipo, aprendimos a escuchar ideas, a mejorar propuestas en conjunto y, sobre todo, a pensar en las necesidades reales de las personas que podrían beneficiarse de esta herramienta.
+Este proyecto no solo fortaleció nuestras habilidades tecnológicas y de colaboración, sino que también nos hizo más conscientes de nuestra responsabilidad como ciudadanos. Saber que con esta página podríamos facilitar el acceso a oportunidades para personas en situación vulnerable, es algo que nos motiva a seguir contribuyendo con más proyectos sociales en el futuro.</p>
+        </div>
+    </div>
+</section>
+
+
+<!Pie de página>
+<footer>
+    <div class="contacto">
+        <h3>Contacto</h3>
+        <p><strong>ACCIONES NACIDAS DEL CORAZÓN</strong><br>
+            Calle Paseo de las Almas, 64017 Monterrey, N.L.<br>
+            Tel: 81 2613 5775<br>
+            Email: 1320e147@cnci.com.mx</p>
+    </div>
+     <div class="mission-text">
+        
+        <a href="https://w.app/accionesnacidasdelcorazon" class="btn-whatsapp" target="_blank">NUESTRO WHATSAPP</a>
+    </div>
+
+</footer>
+
+</body>
+</html>

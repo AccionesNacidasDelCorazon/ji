@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Acciones Nacidas del Corazón</title>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .header { text-align: center; padding: 20px; }
+    .title {
+      font-size: 50px;
+      letter-spacing: 2px;
+      border-bottom: 1px solid white;
+      display: inline-block;
+      padding: 10px 20px;
+      margin-bottom: 10px;
+    }
+    .title1 {
+      font-size: 80px;
+      display: inline-block;
+      padding: 10px 20px;
+      margin-bottom: 10px;
+      text-align: left;
+      color: yellow;
+    }
+    .subtitle1 { font-size: 19px; }
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+    }
+ 
+
+.form-section { padding: 25px; text-align: center; }
+    .program-section {
+    padding: 30px;
+    background-color: #1c1c1c;
+    margin: 0 auto 40px;
+    border-radius: 10px;
+    max-width: 900px;
+    width: 90%;
+}
+
+
+    
+    .program-section h2 {
+      color: yellow;
+      font-size: 35px;
+      text-align: center;
+    }
+    .program-section p {
+      color: white;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+    select, input[type="email"], textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .multiselect {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+    .selectBox {
+      position: relative;
+      background-color: white;
+      color: black;
+      border-radius: 5px;
+      cursor: pointer;
+      padding: 10px;
+      text-align: left;
+      font-size: 16px;
+    }
+    .overSelect {
+      position: absolute;
+      left: 0; right: 0; top: 0; bottom: 0;
+    }
+    #checkboxes {
+      display: none;
+      border-radius: 5px;
+      background-color: #2a2a2a;
+      padding: 10px;
+      position: absolute;
+      z-index: 1;
+      max-height: 200px;
+      overflow-y: auto;
+      width: 100%;
+    }
+    #checkboxes label {
+      display: block;
+      color: white;
+      padding: 5px;
+      cursor: pointer;
+    }
+    #checkboxes label:hover { background-color: #444; }
+    .btn-form {
+      display: block;
+      margin: 30px auto 20px;
+      padding: 12px 25px;
+      background-color: white;
+      color: black;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .btn-form:hover { background-color: #ddd; }
+    footer {
+      background-color: #1a1a1a;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .btn-reset {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #333;
+      color: #ccc;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      }
+
+    .btn-reset:hover {
+      background-color: #555;
+      color: white;
+      }
+
+
+     .btn-enviar {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #3cdcff;
+      color: #111;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .btn-enviar:hover {
+      background-color: #27b8d3;
+      transform: scale(1.03);
+    }
+
+    footer .contacto, footer .caso { max-width: 45%; }
+    .btn-caso {
+      display: inline-block;
+      background-color: white;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div style="text-align: center;">
+  <img src="img/logo.png" alt="logo" style="width: 100px;" />
+</div>
+
+<div class="header">
+  <div class="title">ACCIONES NACIDAS DEL CORAZON</div>
+</div>
+
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="Organizaciones.html">Organizaciones</a>
+  <a href="Encuentra tu Organizacion.html">Encuentra tu Organizacion</a>
+  <a href="Testimonios.html">Testimonios</a>
+</nav>
+
+<section class="form-section">
+  <div class="title1"><strong>¿Quieres saber qué organización te puede ayudar?</strong></div>
+  <div class="subtitle1"><h3>Explora en minutos las opciones de apoyo disponibles en tu ciudad o situación. Gratis, rápido y sin complicaciones.</h3></div>
+</section>
+
+<section class="program-section">
+  <h2>Cuéntanos más para poder ayudarte</h2>
+  <form id="mainForm" action="https://formspree.io/f/xzzvdjzk" method="POST" target="_blank">
+    <p><strong>Correo electrónico:</strong></p>
+    <input type="email" name="email" placeholder="Escribe tu correo" required />
+
+       <p><strong>¿Cuál es tu edad?</strong></p>
+    <select name="edad" required>
+      <option value="">Selecciona una opción</option>
+      <option>Menos de 18 años</option>
+      <option>18 a 30 años</option>
+      <option>31 a 50 años</option>
+      <option>51 a 65 años</option>
+      <option>Más de 65 años</option>
+    </select>
+
+    <p><strong>¿Cuál es tu colonia o zona más cercana?</strong></p>
+    <select name="colonia" required>
+      <option value="">Selecciona una opción</option>
+      <option>Colonia del Valle</option>
+      <option>Independencia</option>
+      <option>San Bernabé</option>
+      <option>Mitras</option>
+      <option>La Alianza</option>
+      <option>Otro</option>
+    </select>
+
+    <p><strong>¿Qué tan urgente es la ayuda que necesitas?</strong></p>
+    <select name="urgencia" required>
+      <option value="">Selecciona una opción</option>
+      <option>Muy urgente hoy o mañana</option>
+      <option>Urgente esta semana</option>
+      <option>No tan urgente puede esperar unos días</option>
+      <option>Es algo a largo plazo</option>
+    </select>
+
+    <p><strong>¿Para quién estás pidiendo ayuda?</strong></p>
+    <select name="personaAyuda" required>
+      <option value="">Selecciona una opción</option>
+      <option>Para mí</option>
+      <option>Para un familiar</option>
+      <option>Para un vecino</option>
+      <option>Para otra persona</option>
+    </select>
+
+    <p><strong>¿Con quién vives actualmente?</strong></p>
+    <select name="convivencia" required>
+      <option value="">Selecciona una opción</option>
+      <option>Vivo solo</option>
+      <option>Vivo con mi familia</option>
+      <option>Vivo con vecinos o conocidos</option>
+      <option>Vivo en una casa hogar o institución</option>
+    </select>
+
+    <p><strong>¿Tienes actualmente algún problema de salud que necesite atención?</strong></p>
+    <select name="problemaSalud" required>
+      <option value="">Selecciona una opción</option>
+      <option>Sí</option>
+      <option>No</option>
+      <option>No estoy seguro</option>
+    </select>
+
+    <p><strong>¿Tienes acceso a internet?</strong></p>
+    <select name="accesoInternet" required>
+      <option value="">Selecciona una opción</option>
+      <option>Sí en mi celular</option>
+      <option>Sí en mi casa</option>
+      <option>No tengo internet</option>
+      <option>A veces me prestan internet</option>
+    </select>
+
+    <p><strong>¿A qué hora es mejor que te contacten?</strong></p>
+    <select name="horaContacto" required>
+      <option value="">Selecciona una opción</option>
+      <option>Mañana de 8 am a 12 pm</option>
+      <option>Tarde de 12 pm a 6 pm</option>
+      <option>Noche de 6 pm a 9 pm</option>
+      <option>Cualquier hora</option>
+    </select>
+
+    <p><strong>¿Cómo prefieres recibir la ayuda?</strong></p>
+    <select name="preferenciaAyuda" required>
+      <option value="">Selecciona una opción</option>
+      <option>Que vengan a mi domicilio</option>
+      <option>Ir yo al lugar</option>
+      <option>Que me orienten por llamada</option>
+    </select>
+
+    <p><strong>¿Cuál es tu situación actual?</strong></p>
+    <select name="situacionActual" required>
+      <option value="">Selecciona una opción</option>
+      <option>Situación de salud grave</option>
+      <option>Falta de recursos básicos</option>
+      <option>Violencia o inseguridad</option>
+      <option>Desaparición de persona cercana</option>
+      <option>Necesidad de acompañamiento o asesoría</option>
+    </select>
+
+    <p><strong>¿En qué municipio vives?</strong></p>
+    <select name="municipio" id="municipioSelect" required>
+      <option value="">Selecciona una opción</option>
+      <option>Monterrey</option>
+      <option>San Nicolás</option>
+      <option>Guadalupe</option>
+      <option>Escobedo</option>
+      <option>Apodaca</option>
+      <option>Santa Catarina</option>
+      <option>San Pedro</option>
+    </select>
+
+    <p><strong>¿Qué tipo de ayuda necesitas principalmente?</strong></p>
+    <div class="multiselect">
+      <div class="selectBox" onclick="toggleCheckboxes()">
+        <span id="displaySelected">Selecciona una o más opciones</span>
+      </div>
+      <div id="checkboxes">
+        <label><input type="checkbox" name="tipoAyuda" value="Alimentaria"> Alimentaria</label>
+        <label><input type="checkbox" name="tipoAyuda" value="Médica"> Médica</label>
+        <label><input type="checkbox" name="tipoAyuda" value="Desaparecidos"> Desaparecidos</label>
+        <label><input type="checkbox" name="tipoAyuda" value="Derechos humanos"> Derechos humanos</label>
+        <label><input type="checkbox" name="tipoAyuda" value="Legal"> Legal</label>
+        <label><input type="checkbox" name="tipoAyuda" value="Salud infantil"> Salud infantil</label>
+        <label><input type="checkbox" name="tipoAyuda" value="Niñez vulnerable"> Niñez vulnerable</label>
+        <label><input type="checkbox" name="tipoAyuda" value="Protección mujeres y niños"> Protección mujeres y niños</label>
+        <label><input type="checkbox" name="tipoAyuda" value="Voluntariado"> Voluntariado</label>
+        <label><input type="checkbox" name="tipoAyuda" value="Psicológica"> Psicológica</label>
+        <label><input type="checkbox" name="tipoAyuda" value="Educación"> Educación</label>
+        <label><input type="checkbox" name="tipoAyuda" value="Talleres"> Talleres</label>
+        <label><input type="checkbox" name="tipoAyuda" value="Capacitación ciudadana"> Capacitación ciudadana</label>
+        <label><input type="checkbox" name="tipoAyuda" value="Limpieza urbana"> Limpieza urbana</label>
+        <label><input type="checkbox" name="tipoAyuda" value="Rehabilitación"> Rehabilitación</label>
+        <label><input type="checkbox" name="tipoAyuda" value="Salud visual"> Salud visual</label>
+        <label><input type="checkbox" name="tipoAyuda" value="Cáncer infantil"> Cáncer infantil</label>
+        <label><input type="checkbox" name="tipoAyuda" value="Apoyo a damnificados y comunidades"> Apoyo a damnificados y comunidades</label>
+        <label><input type="checkbox" name="tipoAyuda" value="Salud"> Salud</label>
+        <label><input type="checkbox" name="tipoAyuda" value="Comunitario"> Comunitario</label>
+      </div>
+    </div>
+
+    <p><strong>Deja algún comentario con informacion relevante</strong></p>
+    <textarea name="comentario" placeholder="Escribe aquí tu comentario" rows="4"></textarea>
+   
+    <button type="submit" class="btn-form" id="btnVerOrganizacion">Ver Organizacion</button>
+    <button type="button" class="btn-reset" onclick="reiniciarFormulario();">Volver a empezar</button>
+
+  </form>
+</section>
+
+<section id="resultados" class="program-section" style="display: none;">
+  <h2>Organizaciones recomendadas</h2>
+  <div id="sugerencias"></div>
+</section>
+
+<footer>
+  <div class="contacto">
+    <h3>Contacto</h3>
+    <p><strong>ACCIONES NACIDAS DEL CORAZÓN</strong><br/>
+      Calle Paseo de las Almas, 64017 Monterrey, N.L.<br/>
+      Tel: 81 2613 5775<br/>
+      Email: 1320e147@cnci.com.mx</p>
+  </div>
+
+  
+
+</footer>
+
+<script>
+  let expanded = false;
+  function toggleCheckboxes() {
+    const checkboxes = document.getElementById("checkboxes");
+    checkboxes.style.display = expanded ? "none" : "block";
+    expanded = !expanded;
+  }
+
+  document.querySelectorAll('#checkboxes input[type="checkbox"]').forEach(chk => {
+    chk.addEventListener('change', updateDisplay);
+  });
+
+  function updateDisplay() {
+    const selected = [...document.querySelectorAll('#checkboxes input[type="checkbox"]:checked')].map(e => e.value);
+    const box = document.getElementById("displaySelected");
+    box.textContent = selected.length > 0 ? selected.join(", ") : "Selecciona una o más opciones";
+  }
+
+  const organizaciones = [
+  {
+    nombre: "Cáritas de Monterrey A.C.",
+    tipo: ["Médica"],
+    zonas: ["Monterrey", "San Nicolás", "Guadalupe", "Escobedo", "Apodaca", "Santa Catarina", "San Pedro"],
+    descripcion: "Despensas, medicamentos, ropa, comedores, asesoría",
+    telefono: "(81) 8340 1212",
+    maps: "https://www.google.com/maps?q=Calle+Juan+Méndez+1205,+Centro,+Monterrey,+N.L."
+  },
+  {
+    nombre: "Banco de Alimentos Cáritas",
+    tipo: ["Alimentaria"],
+    zonas: ["Monterrey", "San Nicolás"],
+    descripcion: "Entrega de despensas, alimentos no perecederos",
+    telefono: "(81) 8340 2100",
+    maps: "https://www.google.com/maps?q=Av.+Madero+2500+Ote.,+Talleres,+Monterrey,+N.L."
+  },
+  {
+    nombre: "CADHAC A.C.",
+    tipo: ["Derechos humanos"],
+    zonas: ["Monterrey", "Guadalupe", "Apodaca"],
+    descripcion: "Asesoría legal, búsqueda de desaparecidos, atención a víctimas",
+    telefono: "(81) 8333 5490",
+    maps: "https://www.google.com/maps?q=Washington+660,+Centro,+Monterrey,+N.L."
+  },
+  {
+    nombre: "Club de Leones Monterrey A.C.",
+    tipo: ["Social"],
+    zonas: ["Monterrey", "San Nicolás", "Guadalupe"],
+    descripcion: "Brigadas médicas, dentales, ópticas, despensas, sillas de ruedas",
+    telefono: "(81) 8123 4567",
+    maps: "https://www.google.com/maps?q=Padre+Mier+575,+Centro,+Monterrey,+N.L."
+  },
+  {
+    nombre: "Fundación ViDa",
+    tipo: ["Legal"],
+    zonas: ["San Nicolás", "Apodaca", "Guadalupe"],
+    descripcion: "Brigadas de salud, asesoría legal, despensas",
+    telefono: "(81) 8672 1133",
+    maps: "https://www.google.com/maps?q=Río+Pánuco+270,+Del+Valle,+San+Pedro+Garza+García,+N.L."
+  },
+  {
+    nombre: "Banco de Tapitas A.C.",
+    tipo: ["Salud infantil"],
+    zonas: ["Monterrey", "Guadalupe", "San Nicolás"],
+    descripcion: "Apoyo a niños con cáncer mediante reciclaje",
+    telefono: "(55) 5350 1230",
+    maps: "https://www.google.com/maps?q=Av.+Patriotismo+201,+Escandón,+CDMX"
+  },
+  {
+    nombre: "Casa Hogar AETS",
+    tipo: ["Niñez vulnerable"],
+    zonas: ["Monterrey"],
+    descripcion: "Alojamiento, alimentación y cuidado a menores",
+    telefono: "(81) 8456 0012",
+    maps: "https://www.google.com/maps?q=Roble+340,+Mitras+Centro,+Monterrey,+N.L."
+  },
+  {
+    nombre: "Alternativas Pacíficas A.C. – Puerta Violeta",
+    tipo: ["Protección mujeres y niños"],
+    zonas: ["San Pedro", "Monterrey", "Guadalupe"],
+    descripcion: "Refugio, apoyo psicológico, legal",
+    telefono: "(81) 8333 8990",
+    maps: "https://www.google.com/maps?q=Platón+Sánchez+105,+Centro,+Monterrey,+N.L."
+  },
+  {
+    nombre: "Jälpem – UDEM",
+    tipo: ["Voluntariado"],
+    zonas: ["Monterrey", "Santa Catarina", "San Pedro"],
+    descripcion: "Brigadas médicas, dentales, psicológicas, talleres comunitarios",
+    telefono: "(81) 8215 1234",
+    maps: "https://www.google.com/maps?q=Av.+Morones+Prieto+4500,+San+Pedro+Garza+García,+N.L."
+  },
+  {
+    nombre: "Cesade – UDEM",
+    tipo: ["Psicológica"],
+    zonas: ["Santa Catarina", "San Pedro"],
+    descripcion: "Consultas psicológicas y nutricionales a bajo costo",
+    telefono: "(81) 8215 6789",
+    maps: "https://www.google.com/maps?q=Av.+Morones+Prieto+4500,+San+Pedro+Garza+García,+N.L."
+  },
+  {
+    nombre: "Club de Niños y Niñas NL",
+    tipo: ["Educación"],
+    zonas: ["Escobedo", "San Pedro", "Monterrey"],
+    descripcion: "Actividades recreativas, culturales, apoyo escolar",
+    telefono: "(81) 8877 5522",
+    maps: "https://www.google.com/maps?q=Cabezada+800,+Solidaridad,+Monterrey,+N.L."
+  },
+  {
+    nombre: "FUNDENL",
+    tipo: ["Desaparecidos"],
+    zonas: ["Monterrey", "Área metropolitana"],
+    descripcion: "Apoyo a familias con personas desaparecidas",
+    telefono: "(81) 8340 4450",
+    maps: "https://www.google.com/maps?q=Ruperto+Martínez+601,+Centro,+Monterrey,+N.L."
+  },
+  {
+    nombre: "Centro Cultural Loyola Monterrey",
+    tipo: ["Comunitario"],
+    zonas: ["Monterrey", "Guadalupe"],
+    descripcion: "Talleres, formación cívica, actividades de servicio",
+    telefono: "(81) 8347 2345",
+    maps: "https://www.google.com/maps?q=Eugenio+Garza+Sada+2426,+Monterrey,+N.L."
+  },
+  {
+    nombre: "Civitas Monterrey",
+    tipo: ["Talleres"],
+    zonas: ["Monterrey", "San Nicolás"],
+    descripcion: "Reciclaje, campañas ecológicas, formación ciudadana",
+    telefono: "(81) 8120 3344",
+    maps: "https://www.google.com/maps?q=Av.+Universidad+900,+San+Nicolás+de+los+Garza,+N.L."
+  },
+  {
+    nombre: "ConParticipación A.C.",
+    tipo: ["Capacitación ciudadana"],
+    zonas: ["Monterrey", "Apodaca", "Guadalupe"],
+    descripcion: "Talleres cívicos, defensa de valores, voluntariado",
+    telefono: "(81) 8365 7812",
+    maps: "https://www.google.com/maps?q=Colonia+Del+Valle,+San+Pedro+Garza+García,+N.L."
+  },
+  {
+    nombre: "SOSAC Monterrey",
+    tipo: ["Limpieza urbana"],
+    zonas: ["Monterrey", "Santa Catarina"],
+    descripcion: "Limpieza de parques, reciclaje, reforestación",
+    telefono: "(81) 8123 0990",
+    maps: "https://www.google.com/maps?q=Colonia+Independencia,+Monterrey,+N.L."
+  },
+  {
+    nombre: "Fundación Markoptic A.C.",
+    tipo: ["Rehabilitación"],
+    zonas: ["Monterrey", "Área metropolitana"],
+    descripcion: "Donación de prótesis, equipo médico, terapias",
+    telefono: "(667) 716 8902",
+    maps: "https://www.google.com/maps?q=Callejón+del+Arte+1228,+Culiacán,+Sinaloa"
+  },
+  {
+    nombre: "Fundación Dr. Sonrisas Monterrey",
+    tipo: ["Salud"],
+    zonas: ["Monterrey", "San Pedro"],
+    descripcion: "Apoyo emocional a niños con enfermedades graves",
+    telefono: "(81) 8880 1144",
+    maps: "https://www.google.com/maps?q=Av.+Lázaro+Cárdenas+2300,+San+Pedro+Garza+García,+N.L."
+  },
+  {
+    nombre: "Destellos de Luz A.B.P.",
+    tipo: ["Salud visual"],
+    zonas: ["Monterrey", "San Nicolás", "Guadalupe"],
+    descripcion: "Exámenes de vista, lentes gratuitos o económicos",
+    telefono: "(81) 8360 2766",
+    maps: "https://www.google.com/maps?q=Isaac+Garza+713,+Centro,+Monterrey,+N.L."
+  },
+  {
+    nombre: "Fundación AMANEC A.B.P.",
+    tipo: ["Cáncer infantil"],
+    zonas: ["Monterrey", "Escobedo"],
+    descripcion: "Alojamiento, tratamiento, apoyo integral",
+    telefono: "(81) 8333 6269",
+    maps: "https://www.google.com/maps?q=Tepeyac+210,+Mitras+Centro,+Monterrey,+N.L."
+  },
+  {
+    nombre: "Asociación Gilberto A.C.",
+    tipo: ["Apoyo a damnificados y comunidades"],
+    zonas: ["Monterrey", "Escobedo", "Santa Catarina"],
+    descripcion: "Vivienda, despensas, brigadas comunitarias",
+    telefono: "(81) 8124 5577",
+    maps: "https://www.google.com/maps?q=Av.+Fundidora+501,+Obrera,+Monterrey,+N.L."
+  }
+];
+
+ function reiniciarFormulario() {
+  const form = document.getElementById('mainForm');
+  form.reset();
+
+  // Reset texto del multiselect
+  document.getElementById("displaySelected").textContent = "Selecciona una o más opciones";
+
+  // Deseleccionar checkboxes manualmente
+  document.querySelectorAll('#checkboxes input[type="checkbox"]').forEach(chk => {
+    chk.checked = false;
+  });
+
+  // Ocultar los checkboxes si estaban abiertos
+  document.getElementById("checkboxes").style.display = "none";
+  expanded = false;
+
+  // Limpiar y ocultar resultados de organizaciones
+  document.getElementById('sugerencias').innerHTML = '';
+  document.getElementById('resultados').style.display = 'none';
+}
+
+ 
+document.getElementById('mainForm').addEventListener('submit', function(e) {
+  e.preventDefault(); // Evita que se envíe el formulario a Formspree
+
+  const municipio = document.getElementById('municipioSelect').value;
+  const ayudasSeleccionadas = [...document.querySelectorAll('input[name="tipoAyuda"]:checked')].map(el => el.value);
+
+  // Filtrar organizaciones
+  const sugeridas = organizaciones.filter(org =>
+    org.zonas.includes(municipio) &&
+    org.tipo.some(tipo => ayudasSeleccionadas.includes(tipo))
+  ).slice(0, 3); // Máximo 3 resultados
+
+  const contenedor = document.getElementById('sugerencias');
+  contenedor.innerHTML = ""; // Limpiar anteriores
+
+  if (sugeridas.length === 0) {
+    contenedor.innerHTML = "<p>No se encontraron organizaciones que coincidan con tus respuestas. Intenta cambiar alguna opción.</p>";
+  } else {
+    sugeridas.forEach(org => {
+  const div = document.createElement('div');
+  div.innerHTML = `
+    <h3 style="color:#3cdcff;">${org.nombre}</h3>
+    <p>${org.descripcion}</p>
+    <p><strong>Teléfono:</strong> ${org.telefono}</p>
+    <p><a href="${org.maps}" target="_blank" style="color:#00ccff;">Ver en Google Maps</a></p>
+    <button class="btn-enviar" onclick="enviarFormulario('${org.nombre}')">Enviar mi información</button>
+    <hr style="margin: 20px 0; border-color: #333;" />
+  `;
+  contenedor.appendChild(div);
+});
+
+ 
+  }
+
+  document.getElementById('resultados').style.display = "block";
+});
+
+document.getElementById('mainForm').addEventListener('submit', function(e) {
+  e.preventDefault(); // Evita envío inmediato
+
+  const municipio = document.getElementById('municipioSelect').value;
+  const ayudasSeleccionadas = [...document.querySelectorAll('input[name="tipoAyuda"]:checked')].map(el => el.value);
+
+  const sugeridas = organizaciones.filter(org =>
+    org.zonas.includes(municipio) &&
+    org.tipo.some(tipo => ayudasSeleccionadas.includes(tipo))
+  ).slice(0, 3); // Máximo 3
+
+  const contenedor = document.getElementById('sugerencias');
+  contenedor.innerHTML = "";
+
+  if (sugeridas.length === 0) {
+    contenedor.innerHTML = "<p>No se encontraron organizaciones que coincidan con tus respuestas. Intenta cambiar alguna opción.</p>";
+  } else {
+    sugeridas.forEach(org => {
+  const div = document.createElement('div');
+  div.innerHTML = `
+    <h3 style="color:#3cdcff;">${org.nombre}</h3>
+    <p>${org.descripcion}</p>
+    <p><strong>Teléfono:</strong> ${org.telefono}</p>
+    <p><a href="${org.maps}" target="_blank" style="color:#00ccff;">Ver en Google Maps</a></p>
+    <button class="btn-enviar" onclick="enviarFormulario('${org.nombre}')">Enviar mi información</button>
+    <hr style="margin: 20px 0; border-color: #333;" />
+  `;
+  contenedor.appendChild(div);
+
+
+    });
+  }
+
+  document.getElementById('resultados').style.display = "block";
+});
+
+function enviarFormulario(nombreOrganizacion) {
+  // Crear campo oculto para incluir el nombre de la organización
+  let inputHidden = document.createElement("input");
+  inputHidden.type = "hidden";
+  inputHidden.name = "organizacion_recomendada";
+  inputHidden.value = nombreOrganizacion;
+
+  const form = document.getElementById('mainForm');
+
+ 
+  const existente = form.querySelector('input[name="organizacion_recomendada"]');
+  if (existente) {
+    existente.remove();
+  }
+
+  form.appendChild(inputHidden);
+
+  // Ahora sí se envía a Formspree
+  form.submit();
+}
+
+
+
+</script>
+</body>
+</html>
